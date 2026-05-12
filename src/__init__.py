@@ -6,4 +6,4 @@ accompanying an in-progress undergraduate research project (Wenzhou-Kean
 University, Department of Mathematical Sciences).
 """
 __version__ = "0.7.0"
-__author__ = "Yuanjie Lin"
+__author__ = "Jie Yuan"
