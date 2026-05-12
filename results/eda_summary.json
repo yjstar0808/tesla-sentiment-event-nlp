@@ -1,0 +1,17 @@
+{
+  "n_articles": 28657,
+  "date_min": "2021-01-01",
+  "date_max": "2025-06-01",
+  "n_sources": 7,
+  "top_sources": {
+    "Business Insider": 13235,
+    "Bloomberg": 4546,
+    "TechCrunch": 4431,
+    "ABC News": 3571,
+    "BBC News": 1180,
+    "Wired": 1029,
+    "The Wall Street Journal": 664
+  },
+  "title_len_mean": 84.03974596084726,
+  "title_len_median": 78.0
+}

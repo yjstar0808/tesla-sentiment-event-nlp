@@ -1,0 +1,26 @@
+{
+  "n_articles_after_cleaning": 28620,
+  "n_trading_days": 1106,
+  "price_source": "yfinance",
+  "vader_mean": 0.0021277943160384893,
+  "vader_std": 0.3517634868621826,
+  "vader_share_positive": 0.3022012578616352,
+  "vader_share_negative": 0.2902166317260657,
+  "vader_share_neutral": 0.4075821104122991,
+  "pearson_S_vs_rt": {
+    "r": 0.08437402664729676,
+    "p": 0.004987709827753714
+  },
+  "pearson_S_vs_r_next": {
+    "r": 0.012220763814569975,
+    "p": 0.6847599607563876
+  },
+  "spearman_S_vs_rt": {
+    "rho": 0.08236707084572259,
+    "p": 0.006128837350680383
+  },
+  "spearman_S_vs_r_next": {
+    "rho": 0.00013448908351111285,
+    "p": 0.9964353914550402
+  }
+}

@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+.env
+
+# Raw / large data — distribute via separate channel, not git
+data/raw/
+data/interim/
+*.sqlite
+*.parquet
+tesla_news_full.csv
+
+# Model artefacts
+models/
+*.pt
+*.safetensors
+
+# Notebook checkpoints
+.ipynb_checkpoints/
