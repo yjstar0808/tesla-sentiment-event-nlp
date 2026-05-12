@@ -212,7 +212,7 @@ Full bibliography (with relation-to-this-project commentary) in
 
 ## 11. Contact
 
-**Yuanjie Lin** (林源杰) · 📧 [yuanjie@kean.edu](mailto:yuanjie@kean.edu)
+**Jie Yuan** (袁捷) · 📧 [yuanjie@kean.edu](mailto:yuanjie@kean.edu)
 
 If you would like access to the in-progress private development repo
 (transformer scoring, ongoing hypothesis-test code, draft manuscript)
