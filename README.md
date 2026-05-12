@@ -45,9 +45,41 @@ multi-window feature design.
 
 ## 2. Pipeline at a glance
 
-<p align="center">
-  <img src="figures/architecture_overview.png" width="900" alt="Four-stage pipeline: corpus → sentiment scoring → multi-window aggregation → hypothesis-aligned regressions"/>
-</p>
+```mermaid
+flowchart TB
+    CORPUS["<b>Stage 1 · News corpus</b><br/>28,620 cleaned articles, 2021-01 → 2025-06<br/>BI · Bloomberg · TechCrunch · ABC · BBC · Wired · WSJ"]:::done
+
+    subgraph SCORING ["Stage 2 · Sentiment scoring"]
+        direction LR
+        VADER["<b>2a · VADER baseline</b><br/>lexicon · compound ∈ [-1, 1]<br/>(DONE)"]:::done
+        FINBERT["<b>2b · FinBERT scoring</b><br/>ProsusAI/finbert · pos/neu/neg<br/>(WIP)"]:::wip
+    end
+
+    AGG["<b>Stage 3 · Multi-window aggregation</b><br/>S_recent (1-7d) · S_medium (8-15d) · S_distant (16-30d)<br/>asymmetric S+/S- · dispersion σ_S"]:::done
+
+    subgraph HYP ["Stage 4 · Hypothesis-aligned regressions"]
+        direction LR
+        H1["<b>H1 · time decay</b><br/>|b_recent| > |b_distant|"]:::wip
+        H2["<b>H2 · asymmetry</b><br/>|b_neg| > |b_pos|"]:::wip
+        H3["<b>H3 · dispersion</b><br/>σ_S → σ_r"]:::plan
+        H4["<b>H4 · regime moderation</b><br/>VIX × S interaction"]:::plan
+    end
+
+    CORPUS --> VADER
+    CORPUS --> FINBERT
+    VADER  --> AGG
+    FINBERT --> AGG
+    AGG --> H1
+    AGG --> H2
+    AGG --> H3
+    AGG --> H4
+
+    classDef done fill:#DCEAF7,stroke:#2F5496,color:#1F3864
+    classDef wip  fill:#FDE9CF,stroke:#C55A11,color:#1F3864
+    classDef plan fill:#EDEDED,stroke:#6F6F6F,color:#404040
+```
+
+<sub>Static PNG version: [`figures/architecture_overview.png`](figures/architecture_overview.png).</sub>
 
 | Colour | Meaning |
 |---|---|
