@@ -11,7 +11,7 @@
 [![Stage](https://img.shields.io/badge/stage-feature%20design%20%2B%20baseline-blue.svg)](#status)
 [![Reproducible](https://img.shields.io/badge/results-fully%20reproducible-success.svg)](docs/REPRODUCE.md)
 
-**Author:** Yuanjie Lin (林源杰) · Wenzhou-Kean University · Department of Mathematical Sciences  
+**Author:** Jie Yuan (袁捷) · Wenzhou-Kean University · Department of Mathematical Sciences  
 **Collaborator / advisor:** (to be added with permission)  
 **Current snapshot:** v0.7  ·  May 2026
 
